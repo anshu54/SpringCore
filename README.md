@@ -1,2 +1,2 @@
 # SpringCore
-In this projects I inject dependencies via Constructor with help help of XML Based Configuration.
+In this projects I inject dependencies via Constructor injection with the help of XML Based Configuration.
