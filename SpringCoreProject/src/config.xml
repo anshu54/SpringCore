@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean name="student" class="com.anshu.core.bean.Student" autowire="constructor">
+		<constructor-arg value="101" index="0" ></constructor-arg>
+		<constructor-arg value="20" index="1" ></constructor-arg>
+		<constructor-arg value="Anshu Singh" index="2"></constructor-arg>
+		
+		
+		<constructor-arg index="5" >
+			<list>
+				<value>9026642813</value>
+				<value>9554927015</value>
+				<value>9984135498</value>
+			</list>
+		</constructor-arg>
+		
+		<constructor-arg index="6" >
+			<set>
+				<ref bean="address1"></ref>
+				<ref bean="address2"></ref>
+				<ref bean="address3"></ref>
+			</set>
+		</constructor-arg>
+		
+		<constructor-arg  index="7">
+			<map>
+				<entry key="JAVA" value="66"></entry>
+				<entry key="DBMS" value="55"></entry>
+				<entry key="Data Structure" value="70"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+	<bean name="d" class="java.util.Date">
+	</bean>
+	
+	<bean name="course" class="com.anshu.core.bean.Course" >
+		<constructor-arg value="455"></constructor-arg>
+		<constructor-arg value="B.Tech"></constructor-arg>
+		<constructor-arg value="4 Years"></constructor-arg>
+		<constructor-arg value="60000.99"></constructor-arg>
+	</bean>
+		
+	<bean name="address1" class="com.anshu.core.bean.Address">
+		<constructor-arg value="212"></constructor-arg>
+		<constructor-arg value="Anshu villa"></constructor-arg>
+		<constructor-arg value="212301"></constructor-arg>
+	</bean>
+	
+	<bean name="address2" class="com.anshu.core.bean.Address">
+		<constructor-arg value="213"></constructor-arg>
+		<constructor-arg value="Shri Nivas"></constructor-arg>
+		<constructor-arg value="122301"></constructor-arg>
+	</bean>
+	
+	<bean name="address3" class="com.anshu.core.bean.Address">
+		<constructor-arg value="214"></constructor-arg>
+		<constructor-arg value="purani Haweli"></constructor-arg>
+		<constructor-arg value="342307"></constructor-arg>
+	</bean>
+			
+</beans>
